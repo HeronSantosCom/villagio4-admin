@@ -1,0 +1,44 @@
+<div class="control-group">
+    <label class="control-label"></label>
+    <div class="controls">
+        <a href="javascript:;" id="gerar_nova_senha">Criar senha aleatória</a>
+    </div>
+</div>
+
+<div class="control-group" id="nova_senha_input">
+    <label class="control-label" for="senha">Senha</label>
+    <div class="controls">
+        <input type="password" class="input-medium" id="senha" name="senha" value="">
+        <span id="senha_help" class="help-inline hide"></span>
+    </div>
+</div>
+
+<div class="control-group hide" id="nova_senha_aleatoria">
+    <label class="control-label">Senha</label>
+    <div class="controls">
+        <input type="text" class="input-medium" id="senha_nova_input" name="senha" value="" disabled="disabled" readonly="readonly">
+        <div class="hide" id="senha_nova_label"></div>
+    </div>
+</div>
+<script type="text/javascript">
+    $("#gerar_nova_senha").click(function() {
+        if ($("#senha").is(":disabled")) {
+            $("#nova_senha_aleatoria").addClass("hide");
+            $("#senha_nova_input").attr("disabled", "disabled");
+            $("#senha").removeAttr("disabled").val();
+            $("#nova_senha_input").removeClass("hide");
+            $("#gerar_nova_senha_cancelar").remove();
+        } else {
+            $("#nova_senha_input").addClass("hide");
+            $("#senha").attr("disabled", "disabled");
+            $("#senha_nova_label").easypassgen({
+                'syllables':        3,
+                'numbers':          true,
+                'specialchars':     false
+            });
+            $("#senha_nova_input").removeAttr("disabled").val($("#senha_nova_label").text());
+            $("#nova_senha_aleatoria").removeClass("hide");
+            $(this).append('<span id="gerar_nova_senha_cancelar"> (clique novamente para cancelar)</span>');
+        }
+    });
+</script>

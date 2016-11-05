@@ -1,0 +1,43 @@
+<div class="page-header">
+    <h2><!-- $layout_titulo --></h2>
+</div>
+<div class="row">
+    <div class="span12">
+        <form autocomplete="off" method="post" class="form-horizontal">
+            <div class="widget">
+                <div class="widget-content">
+                    <input type="hidden" id="buscador" name="buscador" value="true">
+                    <fieldset>
+
+                        <!-- if ($condominio_unico == "") ccc -->
+                        <div class="control-group">
+                            <label class="control-label" for="id_condominio">Condomínio</label>
+                            <div class="controls">
+                                <select id="id_condominio" name="id_condominio" rel="<!-- $id_condominio -->">
+                                    <option value="">Selecione...</option>
+                                    <!-- each ($condominios) e2 -->
+                                    <option value="<!-- $e2.id -->"><!-- $e2.nome --></option>
+                                    <!-- end e2 -->
+                                </select>
+                            </div>
+                        </div>
+                        <!-- else ccc -->
+                        <!--<input type="hidden" id="id_condominio" name="id_condominio" value=" $id_condominio ">-->
+                        <div class="control-group">
+                            <label class="control-label" for="condominio_nome">Condomínio</label>
+                            <div class="controls">
+                                <div class="control-text"><!-- $condominio_nome --></div>
+                            </div>
+                        </div>
+                        <!-- end ccc -->
+
+                    </fieldset>
+                </div>
+            </div>
+            <div class="form-actions">
+                <button name="tipo" value="pdf" class="btn btn-danger btn-large btn-action-save">PDF</button>
+                <button name="tipo" value="excel" class="btn btn-success btn-large btn-action-save">Excel</button>
+            </div>
+        </form>
+    </div>
+</div>

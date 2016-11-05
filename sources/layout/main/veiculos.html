@@ -1,0 +1,36 @@
+<div class="page-header">
+    <h2><!-- $layout_titulo --></h2>
+</div>
+<div class="row">
+    <div class="span12">
+        <!-- if ($formulario == "") f1 -->
+        <!-- import (layout/main/veiculos/busca.html) -->
+        <!-- if ($exibir_listagem != "") s1 -->
+        <!-- if ($veiculos != "") e1 -->
+
+        <a href="javascript:;" class="btn btn-large btn-warning btn-action-new2">Cadastrar!</a>
+        <!-- import (layout/main/veiculos/listar.html) -->
+
+        <!-- else e1 -->
+        <!-- import (layout/vazio.html) -->
+        <!-- end e1 -->
+        <!-- else s1 -->
+        <!-- import (layout/vazio.html) -->
+        <!-- end s1 -->
+        <!-- else f1 -->
+        <!-- if ($remover != "") f2 -->
+        <!-- import (layout/main/veiculos/remover.html) -->
+        <!-- else f2 -->
+        <!-- import (layout/main/veiculos/editar.html) -->
+        <!-- end f2 -->
+        <!-- end f1 -->
+    </div>
+</div>
+<script type="text/javascript">
+    $(".btn-action-new2").click(function() {
+        var id_condominio = $("#id_condominio").val();
+        var id_imovel = $("#id_imovel").val();
+        window.location = $.url() + "&cadastrar" + (id_condominio != undefined && id_condominio.length > 0 ? "&id_condominio=" + id_condominio : "") + (id_imovel != undefined && id_imovel.length > 0 ? "&id_imovel=" + id_imovel : "");
+        return false;
+    });
+</script>

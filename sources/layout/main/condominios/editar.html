@@ -1,0 +1,35 @@
+<form autocomplete="off" method="post" class="form-horizontal">
+    <div class="widget">
+        <div class="widget-content">
+            <input type="hidden" id="id" name="id" value="<!-- $id -->">
+            <fieldset>
+
+                <div class="control-group">
+                    <label class="control-label" for="nome">Nome</label>
+                    <div class="controls">
+                        <input type="text" class="input-xlarge" id="nome" name="nome" value="<!-- $nome -->">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="endereco">Endereço</label>
+                    <div class="controls">
+                        <textarea id="endereco" name="endereco" rows="3"><!-- $endereco --></textarea>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="status">Ativo</label>
+                    <div class="controls">
+                        <input type="checkbox" id="status" name="status" rel="<!-- $status -->" value="1">
+                    </div>
+                </div>
+
+            </fieldset>
+        </div>
+    </div>
+    <div class="form-actions">
+        <button type="submit" class="btn btn-primary btn-large btn-action-save">Salvar</button>
+        <button class="btn btn-large btn-action-cancel">Cancelar</button>
+    </div>
+</form>

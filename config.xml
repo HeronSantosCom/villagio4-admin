@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <config status="1" permalink="0" maintenance="0">
+        <![CDATA[Administração Condominial]]>
+    </config>
+    <information>
+        <domain><![CDATA[admin.villagio4.com]]>
+        </domain>
+        <date><![CDATA[Thu, 04 Apr 2013 13:50:43 -0300]]>
+        </date>
+    </information>
+    <defines>
+        <mysql>
+            <server>localhost</server>
+            <database>condominio</database>
+            <username>root</username>
+            <password></password>
+            <limit>3000</limit>
+            <global>true</global>
+            <dump>true</dump>
+        </mysql>
+        <encoding>
+            <application>utf8</application>
+            <source>utf-8</source>
+        </encoding>
+        <timezone>
+            <locale>pt_BR</locale>
+            <unix>America/Sao_Paulo</unix>
+            <gmt>-3:00</gmt>
+        </timezone>
+    </defines>
+</root>

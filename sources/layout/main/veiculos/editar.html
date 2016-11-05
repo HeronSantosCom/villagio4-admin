@@ -1,0 +1,92 @@
+<form autocomplete="off" method="post" class="form-horizontal">
+    <div class="widget">
+        <div class="widget-content">
+            <input type="hidden" id="id" name="id" value="<!-- $id -->">
+            <fieldset>
+
+                <!-- if ($condominio_unico != "") ccc --> 
+                <input type="hidden" id="id_condominio" name="id_condominio" value="<!-- $id_condominio -->">
+                <div class="control-group">
+                    <label class="control-label" for="condominio_nome">Condomínio</label>
+                    <div class="controls">
+                        <div class="control-text"><!-- $condominio_nome --></div>
+                    </div>
+                </div>
+                <!-- else ccc -->
+                <div class="control-group">
+                    <label class="control-label" for="id_condominio">Condomínio</label>
+                    <div class="controls">
+                        <select id="id_condominio" name="id_condominio" rel="<!-- $id_condominio -->">
+                            <option value="">Selecione...</option>
+                            <!-- each ($condominios) e2 -->
+                            <option value="<!-- $e2.id -->"><!-- $e2.nome --></option>
+                            <!-- end e2 -->
+                        </select>
+                    </div>
+                </div>
+                <!-- end ccc -->
+
+                <!-- if ($id_condominio != "") mm --> 
+
+                <div class="control-group">
+                    <label class="control-label" for="id_imovel">Imóvel</label>
+                    <div class="controls">
+                        <select id="id_imovel" name="id_imovel" rel="<!-- $id_imovel -->">
+                            <!-- each ($imoveis) e3 -->
+                            <option value="<!-- $e3.id -->"><!-- $e3.bloco -->/<!-- $e3.apartamento --></option>
+                            <!-- end e3 -->
+                        </select>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="id_tipo_veiculo">Tipo</label>
+                    <div class="controls">
+                        <select id="id_tipo_veiculo" name="id_tipo_veiculo" rel="<!-- $id_tipo_veiculo -->">
+                            <!-- each ($tipo_veiculos) e4 -->
+                            <option value="<!-- $e4.id -->"><!-- $e4.nome --></option>
+                            <!-- end e4 -->
+                        </select>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="placa">Placa</label>
+                    <div class="controls">
+                        <input type="text" class="input-small" id="placa" alt="car" name="placa" value="<!-- $placa -->">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="descricao">Descrição</label>
+                    <div class="controls">
+                        <textarea id="descricao" name="descricao" rows="3"><!-- $descricao --></textarea>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="tag">Tag</label>
+                    <div class="controls">
+                        <input type="checkbox" id="tag" name="tag" rel="<!-- $tag -->" value="1">
+                        <p class="help-block">Tag instalada.</p>
+                    </div>
+                </div>
+
+                <!-- end mm -->
+
+            </fieldset>
+        </div>
+    </div>
+    <div class="form-actions">
+        <button type="submit" class="btn btn-primary btn-large btn-action-save">Salvar</button>
+        <button class="btn btn-large btn-action-cancel">Cancelar</button>
+    </div>
+</form>
+<script type="text/javascript">
+    $("#id_condominio").change(function() {
+        var valor = $(this).val();
+        var parent_id = "<!-- $id -->";
+        window.location = $.url() + (parent_id != undefined && parent_id.length > 0 ? "&editar&id=" + parent_id : "&cadastrar") + "&id_condominio=" + valor;
+        return false;
+    });
+</script>

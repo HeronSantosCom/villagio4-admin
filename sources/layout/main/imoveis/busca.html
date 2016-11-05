@@ -1,0 +1,28 @@
+<!-- if ($condominio_unico == "") ccc --> 
+<form autocomplete="off" method="post" class="form-horizontal">
+    <div class="widget">
+        <div class="widget-content">
+            <input type="hidden" id="buscador" name="buscador" value="true">
+            <fieldset>
+
+                <div class="control-group">
+                    <label class="control-label" for="id_condominio">Condomínio</label>
+                    <div class="controls">
+                        <select id="id_condominio" name="id_condominio" rel="<!-- $id_condominio -->">
+                            <option value="">Selecione...</option>
+                            <!-- each ($condominios) e2 -->
+                            <option value="<!-- $e2.id -->"><!-- $e2.nome --></option>
+                            <!-- end e2 -->
+                        </select>
+                    </div>
+                </div>
+
+            </fieldset>
+        </div>
+    </div>
+    <div class="form-actions">
+        <button type="submit" class="btn btn-primary btn-large btn-action-save">Exibir <!-- $layout_nome --></button>
+        <button class="btn btn-large btn-action-cancel">Limpar Exibição</button>
+    </div>
+</form>
+<!-- end ccc -->

@@ -1,0 +1,48 @@
+<form autocomplete="off" method="post" class="form-horizontal">
+    <div class="widget">
+        <div class="widget-content">
+            <input type="hidden" id="id" name="id" value="<!-- $id -->">
+            <fieldset>
+
+                <div class="control-group">
+                    <label class="control-label" for="id_condominio">Condomínio</label>
+                    <div class="controls">
+                        <div class="control-text"><!-- $nome_condominio --></div>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="bloco">Bloco</label>
+                    <div class="controls">
+                        <input type="text" class="input-mini" alt="integer" id="bloco" name="bloco" value="<!-- $bloco -->" readonly="">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="apartamento">Apartamento</label>
+                    <div class="controls">
+                        <input type="text" class="input-mini" alt="integer" id="apartamento" name="apartamento" value="<!-- $apartamento -->" readonly="">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="senha_atual">Senha atual</label>
+                    <div class="controls">
+                        <div class="control-text">* Senha criptografada, impossível visualizar novamente.</div>
+                    </div>
+                </div>
+
+            </fieldset>
+        </div>
+    </div>
+
+    <div class="alert alert-danger">
+        <h4>Atenção!</h4>
+        Os moradores e veículos vinculados a este imóvel serão removidos permanentemente!
+    </div>
+
+    <div class="form-actions">
+        <button type="submit" class="btn btn-danger btn-large btn-action-save">Remover</button>
+        <button class="btn btn-large btn-action-cancel">Cancelar</button>
+    </div>
+</form>

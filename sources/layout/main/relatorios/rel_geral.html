@@ -1,0 +1,125 @@
+<page backtop="10mm" backbottom="10mm" backleft="20mm" backright="20mm">
+
+    <page_header>
+        <table style="width: 100%;">
+            <tr>
+                <td style="text-align: center; width: 100%; font-size: 20px; font-weight: bold;"><!-- decode($page_titulo) --></td>
+            </tr>
+        </table>
+    </page_header>
+
+    <page_footer>
+        <table style="width: 100%; border: solid 1px black;">
+            <tr>
+                <td style="text-align: left; width: 80%;"><!-- decode($page_titulo) --> // <!-- $condominio_nome --></td>
+                <td style="text-align: right; width: 20%;">Página [[page_cu]]/[[page_nb]]</td>
+            </tr>
+        </table>
+    </page_footer>
+
+    <table style="width: 100%; border: solid 1px black;">
+        <tr>
+            <td style="text-align: left; width: 20%; font-weight: bold;">Condomínio:</td>
+            <td style="text-align: left; width: 80%;"><!-- $condominio_nome --></td>
+        </tr>
+        <tr>
+            <td style="text-align: left; width: 20%; font-weight: bold;">Endereço:</td>
+            <td style="text-align: left; width: 80%;"><!-- $condominio_endereco --></td>
+        </tr>
+    </table>
+    <br>
+
+    <!-- if ($imoveis != "") is_imoveis -->
+
+    <!-- each ($imoveis) imovel -->
+
+    <!-- if ($imovel(total_moradores) more 0) more_moradores_$imovel(id) -->
+    <table style="width: 100%; border: 0px;">
+        <thead>
+            <tr>
+                <td style="text-align: left; width: 33%; background-color: #DDD;"><span style="font-weight: bold;">Bloco:</span> <!-- $imovel.bloco --></td>
+                <td style="text-align: left; width: 33%; background-color: #DDD;"><span style="font-weight: bold;">Apartamento:</span> <!-- $imovel.apartamento --></td>
+                <td style="text-align: left; width: 34%; background-color: #DDD;"><span style="font-weight: bold;">Moradores:</span> <!-- $imovel.total_moradores --></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align: left; width: 100%;" colspan="3">
+
+                    <!-- if ($imovel(moradores) != "") is_moradores_$imovel(id) -->
+                    <table style="width: 90%; border: 0px;" align="center">
+                        <thead>
+                            <tr>
+                                <th style="width: 100%; text-align: left; font-weight: bold; border-bottom: 2px solid black;" colspan="3">Moradores</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- each ($imovel(moradores)) morador -->
+                            <tr>
+                                <td style="width: 20%; text-align: center; border-bottom: 1px solid black;"><!-- $morador.nome_tipo_morador --></td>
+                                <td style="width: 75%; text-align: left; border-bottom: 1px solid black;"><!-- $morador.nome --></td>
+                                <td style="width: 5%; text-align: left; border-bottom: 1px solid black;">
+                                    <!-- if ($morador(id_tipo_morador) == "3") is_dependente_$morador(id) -->
+                                    <!-- if ($morador(permitir_saida) more "0") is_permitir_saida_$morador(id) -->
+                                    Sim
+                                    <!-- else is_permitir_saida_$morador(id) -->
+                                    Não
+                                    <!-- end is_permitir_saida_$morador(id) -->
+                                    <!-- end is_dependente_$morador(id) -->
+                                </td>
+                            </tr>
+                            <!-- end morador -->
+                        </tbody>
+                    </table>
+                    <!-- end is_moradores_$imovel(id) -->
+
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: left; width: 100%;" colspan="3">
+
+                    <!-- if ($imovel(veiculos) != "") is_veiculos_$imovel(id) -->
+                    <table style="width: 90%; border: 0px;" align="center">
+                        <thead>
+                            <tr>
+                                <th style="width: 100%; text-align: left; font-weight: bold; border-bottom: 2px solid black;" colspan="4">Veículos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- each ($imovel(veiculos)) veiculo -->
+                            <tr>
+                                <td style="width: 15%; text-align: center; border-bottom: 1px solid black;"><!-- $veiculo.placa --></td>
+                                <td style="width: 15%; text-align: center; border-bottom: 1px solid black;"><!-- $veiculo.nome_tipo_veiculo --></td>
+                                <td style="width: 65%; text-align: left; border-bottom: 1px solid black;"><!-- $veiculo.descricao --></td>
+                                <td style="width: 5%; text-align: left; border-bottom: 1px solid black;">
+                                    <!-- if ($veiculo(tag) more "0") is_tag_$veiculo(id) -->
+                                    Tag
+                                    <!-- else is_tag_$veiculo(id) -->
+                                    
+                                    <!-- end is_tag_$veiculo(id) -->
+                                </td>
+                            </tr>
+                            <!-- end veiculo -->
+                        </tbody>
+                    </table>
+                    <!-- end is_veiculos_$imovel(id) -->
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <!-- end more_moradores_$imovel(id) -->
+
+    <!-- end imovel -->
+
+    <!-- else is_imoveis -->
+
+    <span style="font-size: 20px; font-weight: bold; text-align: center;">Nenhum imóvel cadastrado!</span><br>
+    <br>
+    <br>
+
+    <!-- end is_imoveis -->
+
+</page>

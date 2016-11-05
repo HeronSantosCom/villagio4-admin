@@ -1,0 +1,67 @@
+<div class="row">
+    <div class="span12">
+        <form autocomplete="off" method="post" class="form-horizontal">
+            <input type="hidden" id="email" name="email" value="<!-- $email -->">
+            <div class="widget">
+                <div class="widget-content">
+                    <fieldset>
+
+                        <div class="control-group">
+                            <label class="control-label" for="nome">Nome</label>
+                            <div class="controls">
+                                <input type="text" class="input-xlarge" id="nome" name="nome" value="<!-- $nome -->">
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label class="control-label" for="email">E-mail</label>
+                            <div class="controls">
+                                <div class="control-text"><!-- $email --></div>
+                            </div>
+                        </div>
+
+                        <!-- import (layout/senha.html) -->
+
+                        <!-- if ($id != "") c2 -->
+                        <div class="control-group">
+                            <label class="control-label" for="senha_atual">Senha atual</label>
+                            <div class="controls">
+                                <div class="control-text">* Senha criptografada, impossível visualizar novamente.</div>
+                            </div>
+                        </div>
+                        <!-- end c2 -->
+
+                    </fieldset>
+
+                    <!-- if ($plano_nome != "") en1 -->
+                    <fieldset>
+                        <legend>Assinatura</legend>
+
+                        <!-- if (^logon.zpanel_usuario != "") lzu -->
+                        <div class="control-group">
+                            <label class="control-label" for="zpanel_usuario">Conta</label>
+                            <div class="controls">
+                                <div class="control-text"><!-- ^logon.zpanel_usuario --></div>
+                            </div>
+                        </div>
+                        <!-- end lzu -->
+
+                        <div class="control-group">
+                            <label class="control-label" for="plano_id">Plano</label>
+                            <div class="controls">
+                                <div class="control-text"><!-- $plano_nome --> (R$ <!-- $plano_valor_br -->)</div>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                    <!-- end en1 -->
+
+                </div>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary btn-large btn-action-save">Salvar</button>
+                <button class="btn btn-large btn-action-home">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</div>

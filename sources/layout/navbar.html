@@ -1,0 +1,44 @@
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+</a>
+<a class="brand" href="index.html">
+    <!-- !name -->
+</a>
+<div class="nav-collapse">
+    <!-- if ($layout_navbar != "") is_navbar -->
+        <ul class="nav pull-right">
+            <!-- each ($layout_navbar) r_navbar -->
+                <!-- if ($r_navbar(sub) == "") is_navbar_sub_$r_navbar(id) -->
+                    <li>
+                        <a href="<!-- $r_navbar.href -->">
+                            <!-- decode($r_navbar.nome) -->
+                        </a>
+                    </li>
+                <!-- else is_navbar_sub_$r_navbar(id) -->
+                    <li class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                            <!-- decode($r_navbar.nome) -->
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- each ($r_navbar(sub)) r_navbar_sub -->
+                                <!-- if ($r_navbar_sub(icone) == "divider") is_divider_$r_navbar(id)$r_navbar_sub(id) -->
+                                    <li class="divider"></li>
+                                <!-- else is_divider_$r_navbar(id)$r_navbar_sub(id) -->
+                                    <li><a href="<!-- $r_navbar_sub.href -->"><!-- $r_navbar_sub.nome --></a></li>
+                                <!-- end is_divider_$r_navbar(id)$r_navbar_sub(id) -->
+                            <!-- end r_navbar_sub -->
+                        </ul>
+                    </li>
+                <!-- end is_navbar_sub_$r_navbar(id) -->
+            <!-- end r_navbar -->
+        </ul>
+    <!-- end is_navbar -->
+    <!--
+    <form action="" class="navbar-search pull-right">
+        <input type="text" name="q" class="search-query" placeholder="Encontrar">
+    </form>
+    -->
+</div>

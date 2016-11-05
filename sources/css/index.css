@@ -1,0 +1,241 @@
+
+.shortcuts {
+    text-align: center;
+}
+
+.shortcuts .shortcut {
+    width: 30%;
+    display: inline-block;
+    padding: 12px 0;
+    margin: 0 .9% 1em;
+    vertical-align: top;
+
+    text-decoration: none;
+
+    background: #F3F3F3;
+
+    border-radius: 5px;
+}
+
+.shortcuts .shortcut .shortcut-icon {
+    margin-top: .25em;
+    margin-bottom: .25em;
+
+    font-size: 32px;
+    color: #888;
+}
+
+.shortcuts .shortcut:hover {
+    background: #E8E8E8;
+}
+
+.shortcuts .shortcut:hover .shortcut-icon {
+    color: #666;
+}
+
+.shortcuts .shortcut-label {
+    display: block;
+
+    font-weight: 400;
+    color: #666;
+}
+
+.stats {
+    text-align: center;
+}
+.stats .stat {
+    background-color: #eeeeee;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.stats .stat h6 {
+    color: #FFF;
+}
+.stats .warning {
+    background-color: #ffa93c;
+    color: #FFF;
+}
+.stats .success {
+    background-color: #4cb158;
+    color: #FFF; }
+.stats .danger {
+    background-color: #ea494a;
+    color: #FFF;
+}
+.stats .info {
+    background-color: #14b8d4;
+    color: #FFF;
+}
+.stats .primary {
+    background-color: #007ccd;
+    color: #FFF;
+}
+.stats .purple {
+    background-color: #7932ea;
+    color: #FFF;
+}
+.stats .inverse {
+    background-color: #333;
+    color: #FFF;
+}
+
+.news-items {
+    margin: 1em 0 0;
+}
+
+.news-items li {
+    display: table;
+    padding: 0 2em 0 1.5em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    border-bottom: 1px dotted #CCC;
+}
+
+.news-items li:last-child { padding-bottom: 0; border: none; }
+
+.news-item-date {
+    display: table-cell;
+}
+
+.news-item-detail {
+    width: 100%;
+    display: table-cell;
+}
+
+.news-item-title {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.news-item-date {
+    width: 75px;
+    vertical-align: middle;
+
+    text-align: right;
+}
+
+.news-item-day {
+    display: block;
+    margin-bottom: .25em;
+
+    font-size: 24px;
+    color: #888;
+}
+
+.news-item-preview {
+    margin-bottom: 0;
+
+    color: #777;
+}
+
+.news-item-month {
+    display: block;
+    padding-right: 1px;
+
+    font-size: 12px;
+    font-weight: 600;
+    color: #888;
+}
+
+@media (max-width: 979px) {
+    .shortcuts .shortcut {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .stats .stat {
+        margin-bottom: 3em;
+    }
+
+    .stats .stat .stat-value {
+        margin-bottom: .15em;
+        font-size: 20px;
+    }
+
+    .stats {
+        float: left;
+        display: block;
+        margin-bottom: 0;
+    }
+
+    #chart-stats {
+        margin: 2em 0 1em;
+    }
+
+    .shortcuts .shortcut {
+        width: 95%;
+    }
+}
+
+a.btn-action-new, a.btn-action-new2 {
+    display: block; font-size: 22px; padding: 14px 0; font-weight: 600; margin-bottom: .75em;
+}
+
+.btn-action-faq, .btn-action-suporte {
+    display: block; padding: 12px 0; font-size: 18px; font-weight: 600;
+}
+
+.btn-action-produtos {
+    display: block; font-size: 22px; padding: 14px 0; font-weight: 600;
+}
+
+button.btn-action-produtos {
+    width: 100%;
+}
+
+.form-actions {
+    text-align: center;
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: transparent;
+    border-top: transparent;
+}
+
+.form-horizontal .form-actions {
+    padding-left: 0px;
+}
+
+.page-header {
+    margin: 0px;
+    border: 0px;
+}
+
+.summary-box {
+    background-color: #eeeeee;
+    color: #555555;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+.summary-box td.bar-label {
+    width: 40%;
+    text-align: right;
+    padding-right: 20px;
+    font-weight: 600;
+}
+.summary-box td .progress {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+select optgroup{
+    font-size:13px;
+    font-weight:normal;
+    line-height:18px;
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.control-text {
+    font-weight: bold;
+    padding-top: 5px;
+}

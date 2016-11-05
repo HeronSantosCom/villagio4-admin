@@ -1,0 +1,50 @@
+<form autocomplete="off" method="post" class="form-horizontal">
+    <div class="widget">
+        <div class="widget-content">
+            <input type="hidden" id="id" name="id" value="<!-- $id -->">
+            <fieldset>
+
+                <div class="control-group">
+                    <label class="control-label" for="nome_condominio">Condomínio</label>
+                    <div class="controls">
+                        <div class="control-text"><!-- $nome_condominio --></div>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="bloco_imovel_apartamento_imovel">Imóvel</label>
+                    <div class="controls">
+                        <div class="control-text">Bloco <!-- $bloco_imovel --> / Apartamento <!-- $apartamento_imovel --></div>
+                    </div>
+                </div>
+                
+                <div class="control-group">
+                    <label class="control-label" for="nome_tipo_veiculo">Tipo</label>
+                    <div class="controls">
+                        <div class="control-text"><!-- $nome_tipo_veiculo --></div>
+                    </div>
+                </div>
+                
+                <div class="control-group">
+                    <label class="control-label" for="placa">Placa</label>
+                    <div class="controls">
+                        <div class="control-text"><!-- $placa --></div>
+                    </div>
+                </div>
+                
+                <div class="control-group">
+                    <label class="control-label" for="descricao">Descrição</label>
+                    <div class="controls">
+                        <div class="control-text"><!-- $descricao --></div>
+                    </div>
+                </div>
+
+            </fieldset>
+        </div>
+    </div>
+
+    <div class="form-actions">
+        <button type="submit" class="btn btn-danger btn-large btn-action-save">Remover</button>
+        <button class="btn btn-large btn-action-cancel">Cancelar</button>
+    </div>
+</form>
